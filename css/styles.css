@@ -1,0 +1,237 @@
+/* -----------------------------------*/
+/* ---------->>> GLOBAL <<<-----------*/
+/* -----------------------------------*/
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+img,
+video {
+	width: 100%;
+}
+
+
+
+/*--- DEFAULT CUSTOMISATION ---*/
+a { text-decoration: none;}
+a:link { color: #57bceb; }
+a:visited { color: purple; }
+a:hover { color: purple; }
+a:active { color: red; }
+
+
+
+/*--- LAYOUT STRUCTURE ---*/
+
+
+
+
+/*--- REUSABLE CODE ---*/
+.padding-small {
+
+}
+
+.padding-medium {
+
+}
+
+.padding-large {
+	
+}
+
+/*--- Skins, buttons etc.. ---*/
+
+/* Window */
+.window {
+
+}
+
+
+/*--- HELPERS ---*/
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+
+
+
+/*--- Typography ---*/
+/*font-family: 'Baloo Paaji', cursive;
+font-family: 'Mountains of Christmas', cursive;*/
+
+
+/* #Header
+================================================== */
+.header-main {
+	background-color: #DEEFF7;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 9999;
+	border-bottom: 2px solid #31aae2
+}
+
+ul.main-nav {
+	border-top: 1px solid #57BCEB;
+}
+
+/*--- Navigation Menu ---*/
+
+.hamburger-menu {
+    font-size: 23px;
+    float: right;
+    padding: 5px 13px;
+    cursor: pointer;
+    color: #57bceb;
+    border: 2px solid #57bceb;
+    border-radius: 4px;
+}
+
+.hamburger-menu,
+.logo
+{
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.logo a,
+.main-nav a {
+    display: block;
+    color: #57bceb;
+}
+
+.main-nav {
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+	.main-nav a {
+	    padding: 15px 15px;
+	    text-align: center;
+	}
+
+
+
+
+
+
+
+
+
+
+
+/* #Video Intro & Audio
+================================================== */
+.video-intro {
+	min-height: 220px;
+	overflow: hidden;
+	
+}
+
+.video-intro video {
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: -100;
+}
+
+
+
+/* #About
+================================================== */
+.about-section {
+	border-top: 1px solid red;
+	background: white;
+}
+
+/* #Fooer
+================================================== */
+
+
+
+/*font-family: 'Baloo Paaji', cursive;
+font-family: 'Mountains of Christmas', cursive;
+
+
+*/
+
+/* MEDIA QUERIES
+   ========================================================================== */
+@media screen and (min-width: 481px) and (max-width: 1166px) {
+
+
+	/* #Video Intro & Audio
+	================================================== */
+
+	.video-intro {
+		min-height: 265px;		
+	}
+
+}
+
+
+@media screen and (min-width: 769px) {
+
+	/*--- LAYOUT STRUCTURE ---*/
+
+	.container {
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1250px;
+	}
+
+	.video-intro {
+		min-height: 435px;		
+	}
+	
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1125px) {
+
+	/* #Video Intro & Audio
+	================================================== */
+
+	.video-intro {
+		min-height: 560px;	
+	}
+
+}
+
+@media screen and (min-width: 1125px) {
+
+
+	/* #Video Intro & Audio
+	================================================== */
+
+	.video-intro {
+		min-height: 700px;	
+	}
+
+}
+
+
+
