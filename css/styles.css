@@ -12,6 +12,7 @@ body {
 	line-height: 1.6;
     color: #727272;
     font-size: 1em;
+    padding-top: 69px;
 }
 
 h1,
@@ -30,10 +31,22 @@ video {
 	width: 100%;
 }
 
-
+audio {
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+}
 
 /*--- DEFAULT CUSTOMISATION ---*/
-a { text-decoration: none;}
+a { 
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 a:link { color: #57bceb; }
 a:visited { color: purple; }
 a:hover { color: purple; }
@@ -41,12 +54,42 @@ a:active { color: red; }
 
 
 
-/*--- LAYOUT STRUCTURE ---*/
 
+
+/*--- LAYOUT STRUCTURE ---*/
+.site-wrapper {
+	background: whcite;
+}
+
+.christmas-sec,
+.christmas-videos,
+.gallery-sec {
+	background: #FFF;
+}
+
+.christmas-sec,
+.gallery-sec {
+	text-align: center;
+}
+
+
+.ice-top {
+	     -moz-transform: scaleY(-1);
+        -o-transform: scaleY(-1);
+        -webkit-transform: scaleY(-1);
+        transform: scaleY(-1);
+        filter: FlipH;
+        color: red;
+
+}
 
 
 
 /*--- REUSABLE CODE ---*/
+.section {
+	padding:90px 0;
+}
+
 .padding-small {
 
 }
@@ -59,15 +102,86 @@ a:active { color: red; }
 	
 }
 
+
+
 /*--- Skins, buttons etc.. ---*/
 
-/* Window */
-.window {
+/* Icons */
+.icon {
+	border: 4px solid;
+    padding: 40px;
+    border-radius: 50%;
+    margin-bottom: 17px;
+    cursor: pointer;
 
+   	-webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-blue {
+	border-color: #7bc9e7;
+	color: #7bc9e7;
+}
+
+.icon-blue:hover {
+	color: #FFF;
+    background: #7bc9e7;
 }
 
 
+/* Window */
+
+
+.window-1 {
+	background: url('../assets/img/bg7.jpg');
+}
+
+.window {
+	background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 300px;
+}
+
+.window h3{
+	position: absolute;
+	text-align: center;
+
+	width: 90%;
+    transform: translateY(-50%);	
+
+  	margin: 0 auto;
+  	right: 0;
+  	top: 50%;
+  	left: 0;
+
+  	color: #FFF;
+  	font-size: 3em;
+}
+
+.overlay {
+	background: #57bced;
+	opacity: .5;
+	width: 100%;
+	height: 100%;
+}
+
+.overlay-blue {
+	background-color: #57bced;
+}
+
+
+
+
 /*--- HELPERS ---*/
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
 
 .clearfix::after {
 	content: " ";
@@ -79,19 +193,55 @@ a:active { color: red; }
 
 
 /*--- Typography ---*/
-.logo {
+.logo,
+.intro-text  {
 	font-family: 'Baloo Bhaina', cursive;
 	font-weight: 900;
 	font-size: 1.6em;
 }
-.main-nav {
+.main-nav{
 	font-family: 'Mountains of Christmas', cursive;
-	font-size: 1.3em;
-
 }
 
-/*font-family: 'Baloo Paaji', cursive;
-font-family: 'Mountains of Christmas', cursive;*/
+.primary-title {
+	font-family: 'Baloo Bhaina', cursive;
+	font-size: 2em;
+}
+
+/* Intro text */
+.intro-text {
+	font-size: 2em;
+	color: #16a7b8;
+}
+
+
+.intro-text h2 {
+  font-size: 1em;
+  background: -webkit-linear-gradient(#d4f5f4, #16a7b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-text {
+	margin-bottom: 40px;
+}
+
+.primary-title {
+    margin-bottom: 25px;
+    color: #000;
+}
+
+.primary-title::after {
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #7bc9e7;
+    content: '';
+    margin: 0 auto;
+    margin-top: 4px;
+}
+
+
 
 
 /* #Header
@@ -104,7 +254,7 @@ font-family: 'Mountains of Christmas', cursive;*/
 	z-index: 9999;
 
 	background-color: #DEEFF7;
-	border-bottom: 2px solid #31aae2
+	border-bottom: 3px solid #31aae2
 }
 
 ul.main-nav {
@@ -140,12 +290,6 @@ ul.main-nav {
 .main-nav a {
     display: block;
     color: #57bceb;
-
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 }
 
 .logo a:hover,
@@ -162,6 +306,7 @@ ul.main-nav {
     margin: 0;
     padding: 10px 0 0 0;
     list-style: none;
+    font-size: 1.3em;
 }
 
 	.main-nav a {
@@ -172,19 +317,12 @@ ul.main-nav {
 
 
 
-
-
-
-
-
-
-
 /* #Video Intro & Audio
 ================================================== */
 .video-intro {
 	min-height: 220px;
 	overflow: hidden;
-	
+	position: relative;
 }
 
 .video-intro video {
@@ -194,14 +332,87 @@ ul.main-nav {
 	z-index: -100;
 }
 
+.intro-text {
+	position: absolute;
+	text-align: center;
 
+	width: 100%;
+    transform: translateY(-50%);	
+
+  	margin: 0 auto;
+  	right: 0;
+  	top: 50%;
+  	left: 0;
+  	padding: 27px 8px;
+    border-top: 1px solid #32dbd2;
+    border-bottom: 1px solid #55e2dc;
+}
 
 /* #About
 ================================================== */
-.about-section {
-	border-top: 1px solid red;
-	background: white;
+.about-sec {
+	background-color: #57BCED;	
+	max-height: 465px;
+	overflow: hidden;
 }
+
+
+
+/* #Christmas Offer
+================================================== */
+.christmas-offer {
+	margin-bottom: 50px;
+}
+
+.christmas-offer .icon{
+	font-size: 3em;  
+}
+
+
+
+/* #Gallery
+================================================== */
+.gallery-item {
+	cursor: pointer;
+	padding: 8px 11px;
+    border: 2px solid #57bceb;
+    margin-bottom: 23px;
+
+}
+
+.gallery-item img {
+
+}
+
+
+
+/* #Video Section
+================================================== */
+.video {
+	width: 100%;
+	height: 800px;
+}
+
+
+
+/* #Window-s
+================================================== */
+.windows {
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	border-color: #1191cf;
+}
+
+.window-s {
+	padding: 100px 0;
+	border-bottom: 2px solid #1191cf;
+	text-align: center;
+}
+
+.window-s:last-child {
+	border-bottom: 0;
+}
+
 
 /* #Fooer
 ================================================== */
@@ -239,9 +450,31 @@ font-family: 'Mountains of Christmas', cursive;
 		max-width: 1250px;
 	}
 
+	.col {
+		float: left;
+
+	}
+
+	.about-christmas,
+	.about-picture {
+		width: 50%;
+	}
+
+	.christmas-offer {
+		margin-bottom: 0;
+	}
+
+	.about-picture img{
+		max-width: 800px;
+	}
+
+
+
 	.video-intro {
 		min-height: 435px;		
 	}	
+
+
 
 
 
@@ -275,33 +508,141 @@ font-family: 'Mountains of Christmas', cursive;
 	.hamburger-menu {
 	    display: none;
 	}
-	
+
+
+	/*--- Typography ---*/
+	.primary-text {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.primary-title {
+		font-size: 2em;
+	}
+
+	.primary-para {
+		margin:0 50px 55px;
+	}
+
+	/* Intro text */
+	.intro-text {
+		font-size: 2.5em;
+		width: 56%;
+	}
+
+
+	.intro-text h2 {
+	  font-size: 72px;
+
+	}
+
+
+	/*--- Christmas Section ---*/
+
+	.christmas-offer {
+		width: calc(100% / 3 - 3%);
+		margin-right: 3%;
+	}
+
+	.christmas-offer:nth-child(3n) {
+		margin-right: 0;
+	}
+
+	/* #Window-s
+	================================================== */
+
+
+	.window-s {
+		width: calc(100% / 3);
+		padding: 200px 0;
+		border-right: 2px solid #1191cf;
+	}
+
+
+
 
 
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1125px) {
+
+@media screen and (min-width: 768px) and (max-width: 940px){
+
+	/* #Gallery
+	================================================== */
+	.gallery-item {
+		width: 46%;
+		margin-right: 4%;
+		margin-bottom:20px;
+	}
+
+	.gallery-item img {
+		width: 100%;
+		height: 100%;
+		max-height: 215px;
+	}
+
+	.gallery-item:nth-child(2n) {
+		margin-right: 0;
+	}
+
+}
+
+@media screen and (min-width: 940px) {
+
+	/* #Gallery
+	================================================== */
+	.gallery-item {
+		width: 30%;
+		margin-right: 3.3%;
+		margin-bottom: 2%
+	}
+
+	.gallery-item:nth-child(3n) {
+		margin-right: 0;
+	}
+
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1225px) {
 
 	/* #Video Intro & Audio
 	================================================== */
 
 	.video-intro {
-		min-height: 560px;	
+		min-height: 575px;	
 	}
 
 }
 
-@media screen and (min-width: 1125px) {
+@media screen and (min-width: 1225px) and (max-width: 1325px) {
 
 
 	/* #Video Intro & Audio
 	================================================== */
 
 	.video-intro {
-		min-height: 800px;	
+		min-height: 600px;	
 	}
 
 }
+
+
+@media screen and (min-width: 1325px) {
+
+	.video-intro {
+		min-height: 740px;
+	}
+
+}
+
+@media screen and (min-width: 1425px) {
+
+	.video-intro {
+		min-height: 820px;
+	}
+
+}
+
 
 
 
