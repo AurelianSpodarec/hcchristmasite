@@ -63,12 +63,14 @@ a:active { color: red; }
 
 .christmas-sec,
 .christmas-videos,
-.gallery-sec {
+.gallery-sec,
+.contact-sec {
 	background: #FFF;
 }
 
 .christmas-sec,
-.gallery-sec {
+.gallery-sec,
+.contact-sec {
 	text-align: center;
 }
 
@@ -79,9 +81,29 @@ a:active { color: red; }
         -webkit-transform: scaleY(-1);
         transform: scaleY(-1);
         filter: FlipH;
-        color: red;
-
 }
+
+.ice-bottom {
+	    -moz-transform: scaleY(1);
+        -o-transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        filter: FlipH;
+        color: red;
+}
+
+
+ .contact-sec .ice-top,
+ .video-intro .ice-top, {
+	position: absolute;
+	bottom: 0;
+	
+}
+.ice-bottom {
+	position: absolute;
+	top: 0;
+}
+
 
 
 
@@ -90,19 +112,10 @@ a:active { color: red; }
 	padding:90px 0;
 }
 
-.padding-small {
-
+.fixed-bottom {
+	position: absolute;
+	bottom: 0;
 }
-
-.padding-medium {
-
-}
-
-.padding-large {
-	
-}
-
-
 
 /*--- Skins, buttons etc.. ---*/
 
@@ -144,8 +157,33 @@ a:active { color: red; }
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: relative;
-    height: 300px;
+    height: 400px;
 }
+
+.window .ice-top {
+	background: url('../assets/icetry.png');
+	height: 150px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 9999;
+	background-repeat: repeat-x;
+}
+
+.window .ice-bottom {
+	background: url('../assets/icetry.png');
+	height: 150px;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 9999;
+	background-repeat: repeat-x;
+}
+
+.window .ice-top img{
+	width: 100%;  
+}
+
 
 .window h3{
 	position: absolute;
@@ -398,8 +436,8 @@ ul.main-nav {
 /* #Window-s
 ================================================== */
 .windows {
-	border-top: 4px solid;
-	border-bottom: 4px solid;
+	border-top: 9px solid;
+	border-bottom: 5px solid;
 	border-color: #1191cf;
 }
 
@@ -414,16 +452,150 @@ ul.main-nav {
 }
 
 
+
+/* #Contact
+================================================== */
+
+
+.contact-sec {
+	position: relative;
+}
+
+ .contact-sec .ice-top,
+ .video-intro .ice-top {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  
+	border: none;
+	font-size: 16px;
+	height: auto;
+	margin: 0;
+	outline: 0;
+	padding: 15px;
+	width: 100%;
+	color: #8a97a0;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+	margin-bottom: 30px;
+	border-radius: 4px;
+	background: #c1e2f1;
+	border: 1px solid #80d3fa;
+
+
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+
+}
+
+textarea {
+	height: 250px;
+	-webkit-transition: all 0.0s ease-in-out;
+	-moz-transition: all 0.0s ease-in-out;
+	-o-transition: all 0.0s ease-in-out;
+	-ms-transition: all 0.0s ease-in-out;
+	transition: all 0.0s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus{
+	background:#deeff7;
+	border: 1px solid #c1e2f1;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+.contact-sec button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: rgba(87, 188, 235, 0.95);
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+	-webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   -ms-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+}
+
+.contact-sec button:hover {
+	background-color: rgba(87, 188, 235, 0.71);
+}
+
+
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+
+
+
 /* #Fooer
 ================================================== */
 
 
 
-/*font-family: 'Baloo Paaji', cursive;
-font-family: 'Mountains of Christmas', cursive;
 
 
-*/
+
+
 
 /* MEDIA QUERIES
    ========================================================================== */
@@ -443,6 +615,10 @@ font-family: 'Mountains of Christmas', cursive;
 @media screen and (min-width: 769px) {
 
 	/*--- LAYOUT STRUCTURE ---*/
+
+	.section {
+		padding: 130px 0;
+	}
 
 	.container {
 		width: 80%;
@@ -551,6 +727,9 @@ font-family: 'Mountains of Christmas', cursive;
 	/* #Window-s
 	================================================== */
 
+	.windows {
+		margin-bottom: 400px;
+	}
 
 	.window-s {
 		width: calc(100% / 3);
@@ -558,6 +737,17 @@ font-family: 'Mountains of Christmas', cursive;
 		border-right: 2px solid #1191cf;
 	}
 
+
+	/*Contact*/
+	#name, #lastName {
+		width: 49%;
+	}
+	#name {
+		margin-right: 2%;
+	}
+	#lastName {
+		margin-right: 0;
+	}
 
 
 
