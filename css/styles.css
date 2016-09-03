@@ -160,13 +160,15 @@ a:active { color: red; }
     height: 400px;
 }
 
+
+
 .window .ice-top {
 	background: url('../assets/icetry.png');
 	height: 150px;
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-	z-index: 9999;
+	z-index: 999;
 	background-repeat: repeat-x;
 }
 
@@ -176,7 +178,7 @@ a:active { color: red; }
 	width: 100%;
 	position: absolute;
 	bottom: 0;
-	z-index: 9999;
+	z-index: 999;
 	background-repeat: repeat-x;
 }
 
@@ -198,7 +200,7 @@ a:active { color: red; }
   	left: 0;
 
   	color: #FFF;
-  	font-size: 3em;
+  	font-size: 2em;
 }
 
 .overlay {
@@ -375,7 +377,7 @@ ul.main-nav {
 	text-align: center;
 
 	width: 100%;
-    transform: translateY(-50%);	
+    transform: translateY(-75%);	
 
   	margin: 0 auto;
   	right: 0;
@@ -390,9 +392,22 @@ ul.main-nav {
 ================================================== */
 .about-sec {
 	background-color: #57BCED;	
-	max-height: 465px;
 	overflow: hidden;
+	color: #FFF;
 }
+
+.about-christmas h3{
+	font-size: 1.7em;
+	margin-bottom: 20px;
+	padding-top: 60px;
+}
+
+.about-christmas {
+	text-align: center;
+	padding-left: 0;
+	margin: 0 20px 50px;
+}
+
 
 
 
@@ -404,6 +419,11 @@ ul.main-nav {
 
 .christmas-offer .icon{
 	font-size: 3em;  
+}
+
+.christmas-offer h3 {
+	color: #3f3f3f;
+	font-size: 1.5em;
 }
 
 
@@ -428,7 +448,7 @@ ul.main-nav {
 ================================================== */
 .video {
 	width: 100%;
-	height: 800px;
+	min-height: 250px;
 }
 
 
@@ -590,9 +610,94 @@ label.light {
 /* #Fooer
 ================================================== */
 
+.main-footer {
+	background-color: #57bceb;
+    color: #FFF;
+    padding: 35px 0 ;
+    position: relative;
+    margin-top: 80px;
+
+    -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+
+}
+
+.main-footer .tree-layer{
+	font-size: 10em;
+	color: #c1e2f1;
+	position: absolute;
+	bottom: 130px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 30%;
+	display: inline-block;
+}
+
+.copyright-footer {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.footer-icons li {
+    width: 35px;
+    height: 35px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    display: inline-block;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.footer-icons li:hover {
+    border-color: #9bcce3;
+    color: #9bcce3;
+}
+
+.footer-icons ul {
+	margin: 30px 0 0 0;
+	padding: 0;
+}
+
+.copyright-footer p a {
+	color: #deeff7;
+}
+
+.copyright-footer p a:hover {
+	color: #76F2F8;
+}
 
 
 
+/* SCRIPTS JS
+================================================== */
+
+/*jQuery Lightbox*/
+#overlay{
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+}
+#overlay img{
+  position: absolute;
+  top: 50%;
+  width: 60%;
+  height:50%;
+  transform: translateY(-50%);
+  
+  left:0;
+  right:0;
+  margin:0 auto;
+}
 
 
 
@@ -652,6 +757,18 @@ label.light {
 
 
 
+	.about-christmas h3{
+		font-size: 1.7em;
+		margin-bottom: 20px;
+		padding-top: 60px;
+	}
+
+	.about-christmas {
+		text-align: center;
+		padding-left: 0;
+		margin:0
+	}
+
 
 
 	/*--- Navigation Menu ---*/
@@ -693,7 +810,7 @@ label.light {
 	}
 
 	.primary-title {
-		font-size: 2em;
+		font-size: 2.5em;
 	}
 
 	.primary-para {
@@ -710,7 +827,12 @@ label.light {
 	.intro-text h2 {
 	  font-size: 72px;
 
+	}	
+
+	.window h3{
+	  	font-size: 3em;
 	}
+
 
 
 	/*--- Christmas Section ---*/
@@ -722,6 +844,10 @@ label.light {
 
 	.christmas-offer:nth-child(3n) {
 		margin-right: 0;
+	}	
+
+	.about-christmas {
+		padding-left: 10%;
 	}
 
 	/* #Window-s
@@ -748,6 +874,49 @@ label.light {
 	#lastName {
 		margin-right: 0;
 	}
+
+	.video {
+		width: 100%;
+		height: 450px;
+	}
+
+
+	/* #Fooer
+	================================================== */
+
+	.main-footer {
+		margin-top: 0;
+	}
+
+	.main-footer .tree-layer{
+		font-size: 10em;
+	
+		left: 55%;
+		bottom:70px;
+		display: inline-block;
+	}
+
+	.copyright-footer p,
+	.footer-icons {
+		display: inline-block;
+
+
+	}
+	.footer-icons {
+		float: right;
+	}
+
+	.copyright-footer p {
+		float: left;
+		margin-top:50px;
+	}
+
+	.about-sec {
+			max-height: 465px;
+	}
+
+
+
 
 
 
@@ -791,6 +960,13 @@ label.light {
 		margin-right: 0;
 	}
 
+
+
+	.video {
+		width: 100%;
+		height: 750px;
+	}
+
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1225px) {
@@ -801,6 +977,7 @@ label.light {
 	.video-intro {
 		min-height: 575px;	
 	}
+
 
 }
 
